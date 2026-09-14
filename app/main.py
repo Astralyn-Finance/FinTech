@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from sqlalchemy import text
 
-from app.core.config import settings
-from app.database.session import engine
+from app.config import settings
+from app.database import engine
 
 app = FastAPI(title=settings.APP_NAME)
 
