@@ -42,9 +42,8 @@ curl http://127.0.0.1:8000/health/database
 
 ```
 app/
-  core/config.py       # Settings, read from .env — nothing hard-coded
-  database/base.py      # shared declarative Base
-  database/session.py   # engine, SessionLocal, get_db() FastAPI dependency
+  config.py       # Settings, read from .env — nothing hard-coded
+  database.py      # shared declarative Base AND engine, SessionLocal, get_db() FastAPI dependency
   models/                # one file per domain, mirrors the ERD exactly
   main.py               # FastAPI app + /health, /health/database
 alembic/                 # migrations; env.py pulls target_metadata from app.models
