@@ -1,10 +1,14 @@
 from fastapi import FastAPI
 from sqlalchemy import text
 
+from app.api.v1 import admin, auth
 from app.config import settings
 from app.database import engine
 
 app = FastAPI(title=settings.APP_NAME)
+
+app.include_router(auth.router)
+app.include_router(admin.router)
 
 
 @app.get("/health")
