@@ -1,7 +1,7 @@
 from sqlalchemy import Column, DateTime, Float, ForeignKey, Integer, String, UniqueConstraint, func
 from sqlalchemy.orm import relationship
 
-from app.database.base import Base
+from app.database import Base
 
 
 class NewsArticle(Base):

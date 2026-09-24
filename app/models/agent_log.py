@@ -1,13 +1,13 @@
 from sqlalchemy import Column, DateTime, Integer, String
 from sqlalchemy.orm import relationship  # noqa: F401  (kept for consistency; no relationships yet)
 
-from app.database.base import Base
+from app.database import Base
 
 
 class AgentExecutionLog(Base):
     """
     Generalized audit trail for every agent run (not just ingestion).
-    No FK to a specific agent table by design — agents are code, not rows —
+    No FK to a specific agent table by design — agents are code, not rows -
     session_id is the correlation key across a single orchestrated run.
     """
 

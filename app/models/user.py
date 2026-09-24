@@ -1,7 +1,7 @@
 from sqlalchemy import Boolean, CheckConstraint, Column, DateTime, Integer, String, func
 from sqlalchemy.orm import relationship
 
-from app.database.base import Base
+from app.database import Base
 
 # Matches the three roles defined in the platform's master prompt (section 3).
 VALID_ROLES = ("user", "researcher", "admin")

@@ -1,7 +1,7 @@
 from sqlalchemy import CheckConstraint, Column, Date, Float, ForeignKey, Integer
 from sqlalchemy.orm import relationship
 
-from app.database.base import Base
+from app.database import Base
 
 
 class BacktestResult(Base):
